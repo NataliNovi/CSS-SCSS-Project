@@ -1,0 +1,834 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+        url('../../fonts/inter-v12-latin_cyrillic-300.woff2') format('woff2'),
+        url('../../fonts/inter-v12-latin_cyrillic-300.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../../fonts/inter-v12-latin_cyrillic-600.woff2') format('woff2'),
+        url('../../fonts/inter-v12-latin_cyrillic-600.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../../fonts/inter-v12-latin_cyrillic-500.woff2') format('woff2'),
+        url('../../fonts/inter-v12-latin_cyrillic-500.woff') format('woff');
+}
+
+
+// ================ Переменные для шрифтов
+
+// Для свойства font-family
+$ff-primary: "Inter", Verdana, sans-serif;
+// $ff-secondary: можно добавить, если будет несколько шрифтов
+
+// Для свойства font-weight
+$fw-light: 300;
+$fw-meduim: 500;
+$fw-bold: 600;
+
+// Для свойства font-size
+$fs-small: 1rem;
+$fs-medium: 1.25rem;
+$fs-large: 1.875rem;
+
+// Для свойства line-height
+$lh-small: 100%;
+$lh-medium: 120%;
+$lh-large: 130%;
+
+// ================ Миксин для шрифтов
+
+@mixin font($font-size, $line-height: $lh-medium, $font-weight: $fw-meduim, $font-family: $ff-primary, ) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+// Заголовки секций-блоков h2, кроме h1, 30px
+.title {
+    @include font($fs-large, $lh-large, $fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+// Небольшие текстовые элементы, мелкие подписи, p, span, 16px
+.text {
+    @include font($fs-small, $lh-medium, $fw-light);
+}
+
+// Заголовки карточек, текст для кнопок, т.д. 20px
+.small-title {
+    @include font($fs-medium);
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.btn {
+    border: 0.5px solid rgb(18, 18, 18);
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 767.98px) {
+
+    /* styles for блок-хедер START*/
+    .header {
+        max-width: 100%;
+        height: 110px;
+        background: #d4d4d2;
+        position: relative;
+        z-index: 3;
+
+
+
+        &__logo-img {
+            height: 90px;
+            z-index: 1;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 10px;
+        }
+
+        &__item_choker {
+            display: none;
+        }
+
+        &__item_earrings {
+            display: none;
+        }
+
+        &__item_bracelet {
+            display: none;
+        }
+
+        &__item_podveski {
+            display: none;
+        }
+
+        &__item_contact {
+            display: none;
+        }
+
+        &__item_delivery {
+            display: none;
+        }
+
+    }
+
+
+    /*скрываем чекбокс*/
+    #burger-menu__toggle {
+        opacity: 0;
+
+    }
+
+    /*стилизуем кнопку*/
+    .burger-menu__btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 56px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    /*добавляем гамбургер*/
+    .burger-menu {
+
+        &__btn>span,
+        &__btn>span::before,
+        &__btn>span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #8c8c88;
+        }
+
+        &__btn>span::before {
+            content: '';
+            top: -11px;
+        }
+
+        &__btn>span::after {
+            content: '';
+            top: 11px;
+        }
+
+        &__box {
+            display: block;
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            left: -100%;
+            margin: 0;
+            padding: 90px 0 30px 0;
+            list-style: none;
+            text-align: center;
+            background-color: #d4d4d2;
+            box-shadow: 2px 0px 6px rgba(0, 0, 0, .2);
+            border-radius: 0 6px 6px 0;
+            width: 300px;
+
+        }
+
+        &__item {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(22, 21, 21);
+            @include font($fs-medium, $lh-medium, $fw-meduim);
+            text-decoration: none;
+        }
+
+        &__item:hover {
+            background-color: #f2eded;
+        }
+
+        &__contact {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(22, 21, 21);
+            @include font(1.5rem, $lh-medium, $fw-meduim);
+            text-decoration: underline;
+        }
+
+        &__contact:hover {
+            background-color: #f2eded;
+
+        }
+
+        &__delivery {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(22, 21, 21);
+            @include font(1.5rem, $lh-medium, $fw-meduim);
+            text-decoration: underline;
+        }
+
+        &__delivery:hover {
+            background-color: #f2eded;
+
+        }
+    }
+
+    #burger-menu__toggle:checked~.burger-menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #burger-menu__toggle:checked~.burger-menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+
+    #burger-menu__toggle:checked~.burger-menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #burger-menu__toggle:checked~.burger-menu__box {
+        visibility: visible;
+        left: 0;
+    }
+
+    .burger-menu {
+
+        &__btn>span,
+        &__btn>span::before,
+        &__btn>span::after {
+            transition-duration: .25s;
+        }
+
+        &__box {
+            transition-duration: .25s;
+        }
+
+        &__item {
+            transition-duration: .25s;
+        }
+
+    }
+
+
+    /* styles for блок-хедер END*/
+
+    /* styles for блок-приветствие START*/
+
+    .start {
+        &__slogan {
+            text-align: center;
+            @include font($fs-medium, $lh-medium, $fw-bold);
+            padding: 50px 0px 30px 0;
+
+        }
+
+        &__slogan_as {
+            text-align: center;
+            @include font($fs-medium, $lh-medium, $fw-bold);
+            padding: 50px 0px 30px 0;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .welcome {
+
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+
+
+        &__image {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        &__phrase {
+            display: none;
+        }
+
+        &__textlarge_podbor {
+            display: none;
+        }
+
+        &__textlarge_exsclusive {
+            display: none;
+        }
+
+        &__textlarge_new {
+            display: none;
+        }
+
+        &__textlarge_renew {
+            display: none;
+        }
+
+
+        &__textlarge {
+            display: none;
+        }
+
+        &__text {
+            position: absolute;
+            padding: 0px 0px 0px 20px;
+            width: 100%;
+            bottom: 10px;
+        }
+
+        &__text_stone {
+            @include font(1.3rem, $lh-medium, $fw-meduim);
+            color: white;
+            max-width: 90%;
+            max-height: 50%;
+            text-align: start;
+            margin-left: 0rem;
+            text-shadow: 1.5px 1.5px 3px #070707;
+        }
+
+        &__text_rebuild {
+            @include font(1.3rem, $lh-medium, $fw-meduim);
+            color: white;
+            max-width: 90%;
+            max-height: 50%;
+            text-align: start;
+            margin-left: 0rem;
+            margin-top: 2vh;
+            margin-bottom: 0rem;
+            text-shadow: 1.5px 1.5px 3px #070707;
+        }
+    }
+}
+
+
+/* styles for блок-приветствие END*/
+
+
+
+/* styles for блок-про производство START*/
+.workshop {
+    height: auto;
+
+    &__small-title {
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 30px;
+        letter-spacing: 0;
+    }
+
+    &__text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__images {
+
+        &_img1 {
+            width: 100%;
+
+            margin-top: 20px;
+        }
+
+        &_img2 {
+            display: none;
+        }
+
+        &_img3 {
+            display: none;
+            // width: 100%;
+            // margin-top: 20px;
+        }
+
+    }
+}
+
+/* styles for блок-про производство END*/
+
+/* styles for блок-витрина START*/
+.showcase {
+    max-width: 100%;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.category {
+    max-width: 100%;
+
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    column-gap: 10px;
+
+    &_layout-1 {
+        grid-column: 1/3;
+    }
+
+    &_layout-2 {
+        grid-column: 1/2;
+    }
+
+    &_layout-3 {
+        grid-column: 2/3;
+    }
+
+    &__small-title {
+        margin-bottom: 30px;
+        padding: 10px;
+        text-align: start;
+
+        border-bottom: 1px solid #747272;
+    }
+}
+
+.card {
+    margin-bottom: 30px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5px;
+    align-items: flex-start;
+
+    &__img {
+        max-width: 100%;
+
+        grid-column: 1/3;
+    }
+
+    &__img img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &__small-title,
+    &__price {
+        align-self: center;
+    }
+
+    &__small-title {
+        @include font(1rem, $lh-small);
+        grid-column: 1/2;
+    }
+
+    &__text {
+        @include font(0.8rem, $lh-small, $fw-light);
+        grid-column: 1/2;
+    }
+
+    &__price {
+        @include font(1rem, $lh-small);
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        text-align: end;
+        justify-self: end;
+    }
+
+    &_accent_hit,
+    &_accent_sale {
+        position: relative;
+    }
+
+    &_accent_hit::after,
+    &_accent_sale::after {
+        position: absolute;
+
+        top: 20px;
+        left: 5%;
+        padding: 5px;
+        max-width: min-content;
+        height: max-content;
+
+        @include font(1rem, $lh-small, $fw-light);
+        background-color: #FFFFFF;
+        // border: 1px solid #8D8D8D;
+    }
+
+
+    &_accent_sale_35::after {
+        content: "-35%";
+    }
+
+    &_accent_sale_30::after {
+        content: "-30%";
+    }
+
+    &_accent_hit:after {
+        content: "Хит!";
+    }
+}
+
+/* styles for блок-витрина END*/
+/* srtyles for блок-отзывы START*/
+.opinions {
+    height: auto;
+
+    &__container-content:nth-last-child(n+2) {
+        border-bottom: 1px solid #747272;
+    }
+
+    &__content {
+        margin: 20px 0;
+        padding: 15px;
+
+        background-color: #F1F1F1;
+    }
+
+    &__small-title {
+        text-align: center;
+    }
+
+    &__img {
+        float: left;
+
+        border-radius: 50%;
+
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    &__title {
+        padding: 15px;
+    }
+
+    &__text {
+        padding-right: 10px;
+    }
+}
+
+
+/* styles for блок-отзывы END*/
+
+
+
+/* styles for блок stone START*/
+.wrapper1 {
+    max-width: 100%;
+}
+
+.choice {
+    padding: 2rem;
+    text-align: center;
+}
+
+.border {
+    margin-bottom: 2rem;
+    border-top: 1px solid #747272;
+}
+
+#slider {
+    /*положение слайдера*/
+    position: relative;
+    text-align: center;
+    bottom: 2rem;
+}
+
+#slider {
+    /*центровка слайдера*/
+    margin: 0 auto;
+}
+
+#slides article {
+    /*все изображения справа друг от друга*/
+    width: 20%;
+    float: left;
+}
+
+#slides .image {
+    /*устанавливает общий размер блока с изрбражением*/
+    width: 500%;
+    line-height: 0;
+}
+
+#overflow {
+    /*скрывает все, что находится за пределами этог блока*/
+    width: 100%;
+    overflow: hidden;
+}
+
+article image {
+    /*размер изрбражений слайдера*/
+    width: 100%;
+}
+
+#desktop:checked~slider {
+    /*размер всего слайдера, пока активирован чекбокс*/
+    max-width: 960px;
+}
+
+/*настройка переключения и положения левой стрелки*/
+/*если свитч1-4 активны, идет обращение к лейблу из блока с id контролс*/
+#switch1:checked~controls label:nth-child(4),
+#switch1:checked~controls label:nth-child(1),
+#switch1:checked~controls label:nth-child(2),
+#switch1:checked~controls label:nth-child(3) {
+    background: url('prev.png') no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: left;
+    margin: 0 0 0 -84px;
+    /*сдвиг влево*/
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+
+/*настройка переключения правой стрелки*/
+#switch1:checked~controls label:nth-child(2),
+#switch1:checked~controls label:nth-child(3),
+#switch1:checked~controls label:nth-child(4),
+#switch1:checked~controls label:nth-child(1) {
+    background: url('next.png') no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: right;
+    margin: 0 -84px 0 0;
+    /*сдвиг вправо*/
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+
+label,
+a {
+    /*Изменение стрелки при наведении*/
+    cursor: pointer;
+}
+
+.all input {
+    /*скрывает стандартные инпуты*/
+    display: none;
+}
+
+#switch1:checked~#slides .image {
+    margin-left: 0;
+}
+
+#switch2:checked~#slides .image {
+    margin-left: -100%;
+}
+
+#switch3:checked~#slides .image {
+    margin-left: -200%;
+}
+
+#switch4:checked~#slides .image {
+    margin-left: -300%;
+}
+
+#controls {
+    /*позиция изображения при активации переключателя*/
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+
+#active label {
+    /*стиль отдельного переключателя*/
+    border-radius: 10px;
+    display: inline-block;
+    /*расположение в строку*/
+    width: 15px;
+    height: 15px;
+    background: gray;
+    ;
+}
+
+#active {
+    /* расположение блока с переключателями*/
+    margin: 23% 0 0;
+    text-align: center;
+}
+
+#active label:hover {
+    /* поведение чекбокса при наведении*/
+    background: black;
+    border-color: white !important;
+}
+
+/*цвет активного переключателя чекбокса, лейбла  при активации чекбокса*/
+#switch1:checked~ :active label:nth-child(1),
+#switch2:checked~ :active label:nth-child(2),
+#switch3:checked~ :active label:nth-child(3),
+#switch4:checked~ :active label:nth-child(4) {
+    background: black;
+    border-color: white !important;
+}
+
+#slides .image {
+    /*анимация пролистывания изображений*/
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover {
+    /*прозрачность стрелок при наведении*/
+    opacity: 0.6;
+}
+
+#controls label {
+    /*прозрачность стрелок при отводке курсора*/
+    transition: opacity 0.2s ease-out;
+}
+
+//.stone{
+// background-color: #F1F1F1;
+//border-radius: 100px 100px 100px 100px;
+//width: 100vw;
+//}
+//.fone{
+//background-color: #656565;
+//width: 100vw;
+//}
+/* styles for блок stone END*/
+
+/* блок Доставка START*/
+.delivery {
+
+
+    width: 100%;
+    height: auto;
+    background-color: #8d8d8d;
+    color: white;
+    padding: 20px;
+
+    &__bank-card-img {
+        margin-top: 30px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__delivery-method {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+
+    }
+}
+
+/* блок Доставка END*/
+
+/* styles for блок-футер START*/
+
+.footer {
+    background-color: #656565;
+    color: #F1F1F1;
+
+    height: fit-content;
+
+
+    text-align: center;
+
+    &__link {
+        all: unset;
+
+        text-decoration: underline;
+    }
+
+    &__information-block {
+        margin: 2rem 0 0 0;
+    }
+
+    &__item {
+        margin: 1rem 0 0 0;
+    }
+
+    &__icons-block {
+
+
+        margin: 3rem 0;
+
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__icon {
+        margin: 0 2rem 0 0;
+
+        &_change-color {
+            &:focus {
+                color: #070707;
+            }
+        }
+    }
+
+
+    &__link_top {
+        text-decoration: underline;
+    }
+}
+
+
+
+/* styles for блок-футер END*/

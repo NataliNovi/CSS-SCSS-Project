@@ -1,0 +1,495 @@
+@charset "UTF-8";
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  /* styles for блок-хедер START*/
+  .header {
+    max-width: 100%;
+    height: 130px;
+    background: #d4d4d2;
+    color: black;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__logo-img {
+    height: 110px;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .header__item {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+    z-index: 3;
+    padding-left: 15px;
+  }
+  .header__item_choker, .header__item_earrings, .header__item_bracelet, .header__item_podveski {
+    color: black;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 120%;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    /*box-shadow: inset 0px 0px 15px white;*/
+  }
+  .header__item_choker:visited, .header__item_earrings:visited, .header__item_bracelet:visited, .header__item_podveski:visited {
+    color: #5c5c5b;
+  }
+  .header__item_choker:hover, .header__item_earrings:hover, .header__item_bracelet:hover, .header__item_podveski:hover {
+    background: white;
+  }
+  .header__item_contact {
+    color: black;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 120%;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .header__item_delivery {
+    color: black;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 120%;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    margin-left: 15px;
+  }
+  .header__item_contact:visited, .header__item_delivery:visited {
+    color: #5c5c5b;
+  }
+  .header__item_contact:hover, .header__item_delivery:hover {
+    text-decoration: underline;
+  }
+  /* styles for блок-хедер END*/
+  /* styles for блок-приветствие START*/
+  .start {
+    background: #d4d4d2;
+  }
+  .start__slogan {
+    text-align: center;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 120%;
+    padding: 5vh 0px 5vh 0;
+    background: white;
+  }
+  .start__slogan_as {
+    /*text-align: center;*/
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 120%;
+    /*padding: 50px 0px 30px 0;*/
+    text-transform: uppercase;
+  }
+  .welcome {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+  }
+  .welcome__image {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .welcome__text {
+    display: none;
+  }
+  .welcome__textlarge {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: start;
+    margin-left: -1vw;
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
+    align-items: start;
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .welcome__textlarge_main {
+    color: black;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 120%;
+    max-width: 95%;
+    padding: 1vw;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .welcome__textlarge_podbor {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: black;
+    max-width: 95%;
+    margin-left: 0rem;
+    padding-top: 2.6vh;
+  }
+  .welcome__textlarge_exclusive {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: black;
+    max-width: 95%;
+    margin-left: 0rem;
+    padding-top: 2.6vh;
+  }
+  .welcome__textlarge_new {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: black;
+    max-width: 95%;
+    margin-left: 0rem;
+    padding-top: 2.6vh;
+  }
+  .welcome__textlarge_renew {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: black;
+    max-width: 95%;
+    margin-left: 0rem;
+    padding-top: 2.6vh;
+  }
+  /* styles for блок-приветствие END*/
+  /* srtyles for блок-про производство START*/
+  .workshop {
+    height: auto;
+  }
+  .workshop__small-title {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    letter-spacing: 0.2rem;
+  }
+  .workshop__text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .workshop__images {
+    display: flex;
+    gap: 15px;
+    max-width: 100%;
+  }
+  .workshop__images_img1 {
+    flex: 1;
+    width: 33%;
+    margin-top: 20px;
+  }
+  .workshop__images_img2 {
+    display: block;
+    flex: 1;
+    width: 33%;
+    margin-top: 20px;
+  }
+  .workshop__images_img3 {
+    display: block;
+    flex: 1;
+    width: 33%;
+    margin-top: 20px;
+  }
+  /* styles for блок-про производство END*/
+  /* srtyles for блок-витрина START*/
+  .category {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .card {
+    grid-template-columns: 3fr 1fr;
+  }
+  .card__small-title {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 150%;
+  }
+  .card__text {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 120%;
+    grid-column: 1/2;
+  }
+  .card__price {
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 150%;
+  }
+  .card_accent_hit::after, .card_accent_sale::after {
+    padding: 10px;
+    font-family: "Inter", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 120%;
+  }
+  /* styles for блок-витрина END*/
+  /* srtyles for блок-отзывы START*/
+  .opinions__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  .opinions__container-content {
+    width: 32%;
+    border-bottom: none;
+  }
+  .opinions__container-content:nth-last-child(n+2) {
+    border-bottom: none;
+  }
+  .opinions__content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    background-color: #F1F1F1;
+  }
+  .opinions__small-title {
+    text-align: center;
+  }
+  .opinions__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: 50%;
+  }
+  .opinions__title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 20px 0;
+  }
+  .opinions__text {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding-right: 10px;
+  }
+  /* styles for блок-отзывы END*/
+  .wrapper {
+    max-width: 100%;
+  }
+  .stone_choice {
+    text-align: start;
+  }
+  .stone_border {
+    border-top: 1px solid #747272;
+    margin-bottom: 1rem;
+  }
+  .image1 {
+    width: 100%;
+  }
+  .image1_img {
+    width: 70%;
+  }
+  .image1_text {
+    width: 40%;
+  }
+  /*
+      &_text{
+          margin: 1rem;
+      }
+      */
+  #slider {
+    /*положение слайдера*/
+    position: relative;
+    text-align: center;
+    bottom: 1rem;
+  }
+  #slider {
+    /*центровка слайдера*/
+    margin: 0 auto;
+  }
+  #slides article {
+    /*все изображения справа друг от друга*/
+    width: 20%;
+    float: left;
+  }
+  #slides .image {
+    /*устанавливает общий размер блока с изрбражением*/
+    width: 500%;
+    line-height: 0;
+  }
+  #overflow {
+    /*сркывает все, что находится за пределами этого блока*/
+    width: 100%;
+    overflow: hidden;
+  }
+  article img {
+    /*размер изрбражений слайдера*/
+    width: 100%;
+    height: 350px;
+  }
+  #desktop:checked ~ #slider {
+    /*размер всего слайдера, пока активирован чекбокс*/
+    max-width: 960px;
+  }
+  /*настройка переключения и положения левой стрелки*/
+  /*если свитч1-4 активны, идет обращение к лейблу из блока с id контролс*/
+  #switch1:checked ~ #controls label:nth-child(4),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3) {
+    background: url("prev.png") no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: left;
+    margin: 0 0 0 -84px;
+    /*сдвиг влево*/
+    display: block;
+    height: 68px;
+    width: 68px;
+  }
+  /*настройка переключения правой стрелки*/
+  #switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(1) {
+    background: url("next.png") no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: right;
+    margin: 0 -84px 0 0;
+    /*сдвиг вправо*/
+    display: block;
+    height: 68px;
+    width: 68px;
+  }
+  label,
+a {
+    /*при наведении на стрелки или переключатели - курсор изменится*/
+    cursor: pointer;
+  }
+  .all input {
+    /*скрывает стандартные инпуты (чекбоксы) на странице*/
+    display: none;
+  }
+  #switch1:checked ~ #slides .image {
+    margin-left: 0;
+  }
+  #switch2:checked ~ #slides .image {
+    margin-left: -100%;
+  }
+  #switch3:checked ~ #slides .image {
+    margin-left: -200%;
+  }
+  #switch4:checked ~ #slides .image {
+    margin-left: -300%;
+  }
+  #controls {
+    /*позиция изображения при активации переключателя*/
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+  }
+  #active label {
+    /*стиль отдельного переключателя*/
+    border-radius: 10px;
+    display: inline-block;
+    /*расположение в строку*/
+    width: 15px;
+    height: 15px;
+    background: gray;
+    margin-top: 1rem;
+  }
+  #active {
+    /* расположение блока с переключателями*/
+    margin: 15% 0 0;
+    text-align: center;
+  }
+  #active label:hover {
+    /* поведение чекбокса при наведении*/
+    background: black;
+    border-color: white !important;
+  }
+  /*цвет активного переключателя чекбокса, лейбла  при активации чекбокса*/
+  #switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4) {
+    background: black;
+    border-color: white !important;
+  }
+  #slides .image {
+    /*анимация пролистывания изображений*/
+    transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  #controls label:hover {
+    /*прозрачность стрелок при наведении*/
+    opacity: 0.6;
+  }
+  #controls label {
+    /*прозрачность стрелок при отводке курсора*/
+    transition: opacity 0.2s ease-out;
+  }
+  /* srtyles for блок-футер START*/
+  .footer {
+    text-align: start;
+  }
+  .footer__wrapper {
+    display: grid;
+    grid-template-areas: "block1 block2 " "block4 block3 ";
+  }
+  .footer__greed-block_first {
+    grid-area: block1;
+  }
+  .footer__greed-block_second {
+    grid-area: block2;
+  }
+  .footer__greed-block_third {
+    grid-area: block3;
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: start;
+  }
+  .footer__greed-block_fourth {
+    grid-area: block4;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+  .footer__link {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .footer__link_top {
+    margin: 3rem 0 3rem 0;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .footer__link:hover {
+    text-decoration: underline;
+  }
+  .footer__icon_change-color:hover {
+    color: #070707;
+  }
+  /* styles for блок-футер END*/
+}/*# sourceMappingURL=tablet-styles.css.map */
